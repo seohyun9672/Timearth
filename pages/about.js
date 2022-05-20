@@ -13,6 +13,9 @@ const LayoutComp = styled.div`
     margin-top: 5em;
 `
 
+const Img = styled.img`
+`
+
 const Em = styled.span`
     color: #FF9042;
     font-style: normal;
@@ -39,7 +42,7 @@ export default function About() {
                 <Hamburger open={open} setOpen={setOpen} />
                 <Menu open={open} setOpen={setOpen} />
             </div>
-            <img className="logomark" src="/logomark.svg" alt="Timearth Logomark" />
+            <Img className="logomark" src="/logomark.svg" alt="Timearth Logomark" />
             <h1>{PageTitle}</h1>
             <DescCont>
                 <h2>Our planet is in <Em>danger.</Em></h2>
