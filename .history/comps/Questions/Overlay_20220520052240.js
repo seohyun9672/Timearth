@@ -97,7 +97,7 @@ export default function Overlay(props) {
                 <Header>Today’s Results</Header>
                 <H2>You have increased the Earth’s lifespan by</H2>
                 <Time>
-                    <Logo src="/Logomark.svg" />
+                    <Logo src="/logomark.svg" />
                     <Result>{getResults()} mins</Result>
                 </Time>
                 <Button
