@@ -12,9 +12,10 @@ const SubHeader = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 70%;
     height: 100%;
     margin-bottom: 1em;
+    
+
     @media only screen and (min-width: 1024px) and (min-height: 600px){
         width: 30%;
         height: 30%;
@@ -54,10 +55,7 @@ const LayoutComp = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 40%;
-    transform: translate(0, -40%);
-    width: 90%;
+    margin-top: 6em;
 `
 export const Button = styled.button`
     bottom: 8.77%;
@@ -73,13 +71,13 @@ export default function Intro(arr = []) {
     const r = useRouter();
 
     return (
-        <div className='setting'>
+        <LayoutComp>
             <NavBar />
             <div className="menu" ref={node}>
                 <Hamburger open={open} setOpen={setOpen} />
                 <Menu open={open} setOpen={setOpen} />
             </div>
-            {intro ? <LayoutComp>
+            {intro ? <div>
                 <h1>{PageTitle[0]}</h1>
                 <SubHeader>
                     <Logo src={logoData.src} />
@@ -97,13 +95,13 @@ export default function Intro(arr = []) {
                         <div>minutes</div>
                     </EarthMin>
                 </SubHeader>
-                <h4>Here on Timearth, <br /><Em color={color.primaryOrange}>Earth minutes</Em> refer to the number of minutes your actions can add to the Earth's lifespan.</h4>
+                <h4>Here on Timearth, <br /><Em color={color.primaryOrange}>Earth minutes</Em> refer to the number of minutes your actions can add to the Earth`&apos;`s lifespan.</h4>
                 <h4>After you complete the questionnaire, you will receive your results in <Em color={color.primaryOrange}>Earth minutes</Em>, like the example shown above.</h4>
-            </LayoutComp> : <LayoutComp>
+            </div> : <div>
                 <h1>{PageTitle[1]}</h1>
-                <h4>Now let's see how many <Em color={color.primaryOrange}>minutes</Em> you are adding to the Earth's lifespan! <br></br>Complete our <Em color={color.primaryOrange}>12-question quiz</Em> on the following categories:</h4>
+                <h4>Now let`&apos;`s see how many <Em color={color.primaryOrange}>minutes</Em> you are adding to the Earth`&apos;`s lifespan! <br></br>Complete our <Em color={color.primaryOrange}>12-question quiz</Em> on the following categories:</h4>
                 <CateGrid />
-            </LayoutComp>}
+            </div>}
             {
                 intro ? <Button
                     className='primary large'
@@ -125,6 +123,6 @@ export default function Intro(arr = []) {
                     }
                 >{BtnText[1]}</Button>
             }
-        </div>
+        </LayoutComp>
     )
 }
