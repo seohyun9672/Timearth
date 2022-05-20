@@ -16,12 +16,29 @@ const CatCont = styled.div`
 const CatImg = styled.img`
     width: 15vw;
     height: 10vh;
+
+    @media only screen and (max-width: 320px) and (max-height: 800px){
+        width: 12vw;
+        height: 12vh;
+    }
+    @media only screen and (min-width: 1024px) and (min-height: 600px){
+        width: 50%;
+        height: 50%;
+    }
+    @media only screen and (min-height: 1024px) {
+        width: 60%;
+        height: 60%;
+    }
 `
 const CatName = styled.div`
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
     text-align: center;
+
+    @media only screen and (max-width: 320px) and (max-height: 800px){
+        font-size: 14px;
+    }
 `
 
 export default function CateGrid() {

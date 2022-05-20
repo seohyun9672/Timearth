@@ -3,10 +3,27 @@ import CateGrid from '../comps/CateGrid'
 import { PageTitle, BtnText } from '../data/intro_content';
 import { useRouter } from 'next/router';
 import { Hamburger, Menu } from "../comps/Menu";
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import NavBar from "../comps/NavBar";
 import { logoData, color } from '../data/global_content';
 import CountUp from 'react-countup';
+import { slideInLeft, slideInRight, fadeIn } from '../data/animation';
+
+const LayoutComp = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7em;
+
+    @media only screen and (max-width: 320px) and (max-height: 800px){
+        margin-top: 4em;
+    }
+`
+const Header = styled.h1`
+    animation: ${props => props.slide} 1s;
+    animation-delay: ${props => props.delay || "0s"};
+`
 
 const SubHeader = styled.div`
     display: flex;
@@ -14,8 +31,11 @@ const SubHeader = styled.div`
     justify-content: space-around;
     height: 100%;
     margin-bottom: 1em;
+    margin: auto;
+    width: fit-content;
+    animation: ${props => props.fade} 1s;
+    animation-delay: ${props => props.delay || "0s"};
     
-
     @media only screen and (min-width: 1024px) and (min-height: 600px){
         width: 30%;
         height: 30%;
@@ -35,6 +55,7 @@ const Em = styled.span`
 const Logo = styled.img`
     width: 10vw;
     height: 10vh;
+
     @media only screen and (min-height: 1024px) {
         width: 8vw;
         height: 8vh;
@@ -48,15 +69,13 @@ const EarthMin = styled.div`
     font-size: 24pt;
     display: flex;
     justify-content: space-around;
+
+    @media only screen and (max-width: 320px) and (max-height: 800px){
+        font-size: 20pt;
+    }
 `
 
-const LayoutComp = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 6em;
-`
+
 export const Button = styled.button`
     bottom: 8.77%;
     position: absolute;
@@ -78,8 +97,8 @@ export default function Intro(arr = []) {
                 <Menu open={open} setOpen={setOpen} />
             </div>
             {intro ? <div>
-                <h1>{PageTitle[0]}</h1>
-                <SubHeader>
+                <Header slide={slideInLeft}>{PageTitle[0]}</Header>
+                <SubHeader fade={fadeIn}>
                     <Logo src={logoData.src} />
                     <EarthMin>
                         <CountUp
@@ -95,11 +114,11 @@ export default function Intro(arr = []) {
                         <div>minutes</div>
                     </EarthMin>
                 </SubHeader>
-                <h4>Here on Timearth, <br /><Em color={color.primaryOrange}>Earth minutes</Em> refer to the number of minutes your actions can add to the Earth`&apos;`s lifespan.</h4>
+                <h4>Here on Timearth, <br /><Em color={color.primaryOrange}>Earth minutes</Em> refer to the number of minutes your actions can add to the Earth&apos;s lifespan.</h4>
                 <h4>After you complete the questionnaire, you will receive your results in <Em color={color.primaryOrange}>Earth minutes</Em>, like the example shown above.</h4>
             </div> : <div>
-                <h1>{PageTitle[1]}</h1>
-                <h4>Now let`&apos;`s see how many <Em color={color.primaryOrange}>minutes</Em> you are adding to the Earth`&apos;`s lifespan! <br></br>Complete our <Em color={color.primaryOrange}>12-question quiz</Em> on the following categories:</h4>
+                <h1 slide={slideInLeft}>{PageTitle[1]}</h1>
+                <h4>Now let&apos;s see how many <Em color={color.primaryOrange}>minutes</Em> you are adding to the Earth&apos;s lifespan! <br></br>Complete our <Em color={color.primaryOrange}>12-question quiz</Em> on the following categories:</h4>
                 <CateGrid />
             </div>}
             {
