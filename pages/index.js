@@ -4,6 +4,7 @@ import { PageTitle, BtnText } from '../data/index_content'
 import { Hamburger, Menu } from "../comps/Menu";
 import React from "react";
 import NavBar from "../comps/NavBar";
+import { logoData } from "../data/global_content";
 // import Image from 'next/image';
 
 
@@ -41,7 +42,7 @@ export default function Home() {
             </div>
             <Logo
                 className="logomark"
-                src="/Logomark.svg"
+                src= {logoData.src}
                 alt="Timearth Logomark"
                />
             <h1>{PageTitle}</h1>

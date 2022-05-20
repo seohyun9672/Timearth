@@ -26,3 +26,7 @@ export const catData = [
         src: "/shopping.svg"
     }
 ]
+
+export const logoData = {
+    src: "/Logomark.svg"
+}
