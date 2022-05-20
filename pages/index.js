@@ -4,7 +4,7 @@ import { PageTitle, BtnText } from '../data/index_content'
 import { Hamburger, Menu } from "../comps/Menu";
 import React from "react";
 import NavBar from "../comps/NavBar";
-import Image from 'next/image';
+// import Image from 'next/image';
 
 
 const LayoutComp = styled.div`
@@ -21,8 +21,9 @@ const Em = styled.span`
     font-weight: 700;
 `
 
-const Img = styled.img`
-
+const Logo = styled.img`
+margin:0.5em;
+width:7vw;
 `
 
 export default function Home() {
@@ -38,12 +39,11 @@ export default function Home() {
                 <Hamburger open={open} setOpen={setOpen} />
                 <Menu open={open} setOpen={setOpen} />
             </div>
-            <Image
+            <Logo
                 className="logomark"
-                src="/logomark.svg"
+                src="/Logomark.svg"
                 alt="Timearth Logomark"
-                width={100}
-                height={100}/>
+               />
             <h1>{PageTitle}</h1>
             <h4>Log your daily activities and see how many <Em>Earth minutes</Em> you have saved today!</h4>
             <div className="background-shape" />
