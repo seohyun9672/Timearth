@@ -140,7 +140,7 @@ export default function Overlay(props) {
                 <H2>This challenge will increase the Earth's Lifespan by</H2>
                 <DateCont>
                 <Time>
-                    <Logo src="/Logomark.svg" />
+                    <Logo src="/logomark.svg" />
                     <Result>{Challenges[0].time} mins</Result>
                 </Time>
                 </DateCont>
