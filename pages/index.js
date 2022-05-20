@@ -41,7 +41,6 @@ export default function Home() {
                 <Menu open={open} setOpen={setOpen} />
             </div>
             <Logo
-                className="logomark"
                 src= {logoData.src}
                 alt="Timearth Logomark"
                />
