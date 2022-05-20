@@ -75,6 +75,15 @@ const EarthMin = styled.div`
     }
 `
 
+const H1 = styled.h1`
+    animation: ${props => props.slide} 1s;
+    animation-delay: ${props => props.delay || "0s"};
+`
+const H4 = styled.h4`
+    animation: ${props => props.slide} 1s;
+    animation-delay: ${props => props.delay || "0s"};
+`
+
 
 export const Button = styled.button`
     bottom: 8.77%;
@@ -114,11 +123,11 @@ export default function Intro(arr = []) {
                         <div>minutes</div>
                     </EarthMin>
                 </SubHeader>
-                <h4>Here on Timearth, <br /><Em color={color.primaryOrange}>Earth minutes</Em> refer to the number of minutes your actions can add to the Earth&apos;s lifespan.</h4>
-                <h4>After you complete the questionnaire, you will receive your results in <Em color={color.primaryOrange}>Earth minutes</Em>, like the example shown above.</h4>
+                <H4 slide={slideInRight}>Here on Timearth, <br /><Em color={color.primaryOrange}>Earth minutes</Em> refer to the number of minutes your actions can add to the Earth&apos;s lifespan.</H4>
+                <H4 slide={slideInRight}>After you complete the questionnaire, you will receive your results in <Em color={color.primaryOrange}>Earth minutes</Em>, like the example shown above.</H4>
             </div> : <div>
-                <h1 slide={slideInLeft}>{PageTitle[1]}</h1>
-                <h4>Now let&apos;s see how many <Em color={color.primaryOrange}>minutes</Em> you are adding to the Earth&apos;s lifespan! <br></br>Complete our <Em color={color.primaryOrange}>12-question quiz</Em> on the following categories:</h4>
+                <H1 slide={slideInLeft}>{PageTitle[1]}</H1>
+                <H4 slide={slideInRight}>Now let&apos;s see how many <Em color={color.primaryOrange}>minutes</Em> you are adding to the Earth&apos;s lifespan! <br></br>Complete our <Em color={color.primaryOrange}>12-question quiz</Em> on the following categories:</H4>
                 <CateGrid />
             </div>}
             {

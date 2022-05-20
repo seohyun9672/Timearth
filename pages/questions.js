@@ -13,6 +13,7 @@ export const Layout = styled.div`
     flex-direction: column;
     justify-center: center;
     margin-top: 3em;
+    width: 90vw;
 `
 
 export const BackButton = styled.div`
@@ -64,16 +65,16 @@ export default function Questions() {
     const r = useRouter();
     const [OverlayOpen, setOverlayOpen] = useState(false);
 
-    // useEffect(() => {
-    //     if (!r.isReady) return;
-    //     r.push({
-    //         pathname: "/questions",
-    //         query: {
-    //             qnum: 0,
-    //             type: qs[0].cat
-    //         }
-    //     })
-    // }, [])
+    useEffect(() => {
+        if (!r.isReady) return;
+        r.push({
+            pathname: "/questions",
+            query: {
+                qnum: 0,
+                type: qs[0].cat
+            }
+        })
+    }, [])
 
     var { qnum, type } = r.query;
 
@@ -109,7 +110,6 @@ export default function Questions() {
                 q={qs[qnum].title}
                 arr={qs[qnum].ops}
                 c={qs[qnum].cat}
-                active={true}
             />
             {
                 Number(qnum) < qs.length - 1 &&
