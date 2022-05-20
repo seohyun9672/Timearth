@@ -7,7 +7,7 @@ import { Challenges } from "../../data/challenge_content"
 const Background = styled.div`
     background-color: black;
     width: 100%;
-    height: 100%;
+    height: 200%;
     display: block;
     position: absolute;
     left: 0;
@@ -47,10 +47,8 @@ const OverlayComp = styled.div`
     width: 330px;
     height: fit-content;
     position: absolute;
-    top: 0;
-    left: 0;
-    top:50%;
-    left:50%;
+    top: 50%;
+    left: 50%;
     z-index: 10;
     transform:translate(-50%, -50%);
 `
@@ -61,7 +59,7 @@ const Time = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 100%;
 `
 const Logo = styled.img`
     width: 3em;
