@@ -99,7 +99,7 @@ export default function Intro(arr = []) {
                 <h4>After you complete the questionnaire, you will receive your results in <Em color={color.primaryOrange}>Earth minutes</Em>, like the example shown above.</h4>
             </div> : <div>
                 <h1>{PageTitle[1]}</h1>
-                <h4>Now let&apos;s see how many <Em color={color.primaryOrange}>minutes</Em> you are adding to the Earth&apos;s lifespan! <br></br>Complete our <Em color={color.primaryOrange}>12-question quiz</Em> on the following categories:</h4>
+                <h4>Now let`&apos;`s see how many <Em color={color.primaryOrange}>minutes</Em> you are adding to the Earth&apos;s lifespan! <br></br>Complete our <Em color={color.primaryOrange}>12-question quiz</Em> on the following categories:</h4>
                 <CateGrid />
             </div>}
             {
