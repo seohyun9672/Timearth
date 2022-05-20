@@ -38,7 +38,12 @@ export default function Home() {
                 <Hamburger open={open} setOpen={setOpen} />
                 <Menu open={open} setOpen={setOpen} />
             </div>
-            <Image className="logomark" src="/logomark.svg" alt="Timearth Logomark" />
+            <Image
+                className="logomark"
+                src="/logomark.svg"
+                alt="Timearth Logomark"
+                width={100}
+                height={100}/>
             <h1>{PageTitle}</h1>
             <h4>Log your daily activities and see how many <Em>Earth minutes</Em> you have saved today!</h4>
             <div className="background-shape" />
