@@ -70,12 +70,15 @@ const Result = styled.div`
     text-align: center;
     color: #000000;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    
 `
 const Time = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 100%;
 `
 const H2 = styled.div`
     font-weight: 600;
@@ -97,7 +100,7 @@ export default function Overlay(props) {
                 <Header>Today’s Results</Header>
                 <H2>You have increased the Earth’s lifespan by</H2>
                 <Time>
-                    <Logo src="/Logomark.svg" />
+                    <Logo src="/logomark.svg" />
                     <Result>{getResults()} mins</Result>
                 </Time>
                 <Button
