@@ -1,25 +1,32 @@
 import { useRouter } from "next/router";
 import styled from 'styled-components';
-import { PageTitle, BtnText } from '../data/index_content'
+import { PageTitle, BtnText } from '../data/about_content'
+import NavBar from "../comps/NavBar";
 import { Hamburger, Menu } from "../comps/Menu";
 import React from "react";
-import NavBar from "../comps/NavBar";
 
 const LayoutComp = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 6.5em;
+    margin-top: 5em;
 `
 
 const Em = styled.span`
-    color: #6B97ED;
+    color: #FF9042;
     font-style: normal;
     font-weight: 700;
 `
 
-export default function Home() {
+const DescCont = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center; 
+`
+
+export default function About() {
 
     const [open, setOpen] = React.useState(false);
     const node = React.useRef();
@@ -34,15 +41,21 @@ export default function Home() {
             </div>
             <img className="logomark" src="/logomark.svg" alt="Timearth Logomark" />
             <h1>{PageTitle}</h1>
-            <h4>Log your daily activities and see how many <Em>Earth minutes</Em> you have saved today!</h4>
-            <div className="background-shape" />
+            <DescCont>
+                <h2>Our planet is in <Em>danger.</Em></h2>
+                <h4>Human actions are the leading cause of climate change. Factors such as transportation and water usage change yield detrimental effects over time.</h4>
+            </DescCont>
+            <DescCont>
+                <h2>Our <Em>Purpose</Em></h2>
+                <h4>This app was created to bring awareness to the impact our everyday actions can have on the planet.</h4>
+            </DescCont>
             <button
-                className="default"
+                className="primary large"
                 onClick={
                     () => {
                         r.push(
                             {
-                                pathname: "/intro"
+                                pathname: "/"
                             }
                         )
                     }
