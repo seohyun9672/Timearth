@@ -30,3 +30,7 @@ export const catData = [
 export const logoData = {
     src: "/Logomark.svg"
 }
+
+export const color = {
+    primaryOrange: "#FF9042"
+}
