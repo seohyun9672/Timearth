@@ -64,7 +64,7 @@ export default function Intro() {
             {intro && <div>
                 <h1>{PageTitle[0]}</h1>
                 <EarthMin><Logo src='/Logomark.svg' /> 60 minutes</EarthMin>
-                <h4>Here on Timearth, <Em>Earth minutes</Em> refer to the number of minutes your actions can add to the Earth's lifespan.</h4>
+                <h4>Here on Timearth, <Em>Earth minutes</Em> refer to the number of minutes your actions can add to the Earth&apos;s lifespan.</h4>
                 <h4>After you complete the questionnaire, you will receive your results in Earth minutes, like the example shown above.</h4>
             <Button
                 className='primary large'
@@ -76,7 +76,7 @@ export default function Intro() {
             >{BtnText[0]}</Button></div>}
             {!intro && <div>
                 <h1>{PageTitle[1]}</h1>
-                <h4>Now let's see how many <Em>minutes</Em> you are adding to the Earth's lifespan! Complete our <Em>12-question quiz</Em> on the following categories:</h4>
+                <h4>Now let's see how many <Em>minutes</Em> you are adding to the Earth&apos;s lifespan! Complete our <Em>12-question quiz</Em> on the following categories:</h4>
             <CateGrid />
             <Button
                 className='primary large'

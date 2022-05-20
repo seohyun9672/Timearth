@@ -64,16 +64,16 @@ export default function Questions() {
     const r = useRouter();
     const [OverlayOpen, setOverlayOpen] = useState(false);
 
-    useEffect(() => {
-        if (!r.isReady) return;
-        r.push({
-            pathname: "/questions",
-            query: {
-                qnum: 0,
-                type: qs[0].cat
-            }
-        })
-    }, [])
+    // useEffect(() => {
+    //     if (!r.isReady) return;
+    //     r.push({
+    //         pathname: "/questions",
+    //         query: {
+    //             qnum: 0,
+    //             type: qs[0].cat
+    //         }
+    //     })
+    // }, [])
 
     var { qnum, type } = r.query;
 

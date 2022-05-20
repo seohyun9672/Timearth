@@ -4,6 +4,7 @@ import { PageTitle, BtnText } from '../data/about_content'
 import NavBar from "../comps/NavBar";
 import { Hamburger, Menu } from "../comps/Menu";
 import React from "react";
+import Image from 'next/image'
 
 const LayoutComp = styled.div`
     display: flex;
@@ -42,7 +43,7 @@ export default function About() {
                 <Hamburger open={open} setOpen={setOpen} />
                 <Menu open={open} setOpen={setOpen} />
             </div>
-            <Img className="logomark" src="/logomark.svg" alt="Timearth Logomark" />
+            <Image className="logomark" src="/logomark.svg" alt="Timearth Logomark" />
             <h1>{PageTitle}</h1>
             <DescCont>
                 <h2>Our planet is in <Em>danger.</Em></h2>
