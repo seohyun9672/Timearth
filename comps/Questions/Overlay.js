@@ -65,17 +65,19 @@ const Result = styled.div`
     font-family: 'Oxanium';
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 36px;
     line-height: 60px;
     text-align: center;
     color: #000000;
+    width: fit-content;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
 `
 const Time = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 100%;
 `
 const H2 = styled.div`
     font-weight: 600;
