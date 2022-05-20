@@ -5,7 +5,7 @@ import { Hamburger, Menu } from "../comps/Menu";
 import React from "react";
 import NavBar from "../comps/NavBar";
 import { logoData } from "../data/global_content";
-// import Image from 'next/image';
+import { slideInRight } from "../data/animation";
 
 
 const LayoutComp = styled.div`
@@ -27,8 +27,9 @@ const Em = styled.span`
 `
 
 const Logo = styled.img`
-    width: 40%;
-    height: 40%;
+    width: 30%;
+    height: 30%;
+    animation: ${props => props.slide} 1s;
 
     @media only screen and (max-width: 320px) and (max-height: 800px){
         width: 25%;
@@ -38,11 +39,10 @@ const Logo = styled.img`
         width: 15%;
         height: 15%;
     }
-    @media only screen and (min-height: 1024px) {
-        width: 30%;
-        height: 30%;
+    @media only screen and (min-Width: 1024px) {
+        width: 35%;
+        height: 35%;
     }
-
 `
 
 export default function Home() {
@@ -61,6 +61,7 @@ export default function Home() {
             <Logo
                 src= {logoData.src}
                 alt="Timearth Logomark"
+                slide ={slideInRight}
                />
             <h1>{PageTitle}</h1>
             <h4>Log your daily activities and see how many <Em>Earth minutes</Em> you have saved today!</h4>
