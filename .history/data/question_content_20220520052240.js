@@ -55,7 +55,7 @@ export function getResults(cnum, score) {
     if ((res_sum === undefined) || (0 <= res_sum) && (res_sum <= 11)) {
         return (<div>
             <CountUp
-                start={0}
+                start={99.00}
                 end={0}
                 duration={1.5}
                 decimal={2}
@@ -64,7 +64,7 @@ export function getResults(cnum, score) {
                     <span ref={countUpRef} />
                 )}
             </CountUp> : <CountUp
-                start={0}
+                start={9}
                 end={0}
                 duration={1}
                 decimal={2}
@@ -76,7 +76,7 @@ export function getResults(cnum, score) {
                 )}
 
             </CountUp><CountUp
-                start={0}
+                start={8}
                 end={0}
                 duration={1}
                 decimal={2}
@@ -94,7 +94,7 @@ export function getResults(cnum, score) {
     if ((res_sum > 11) && (res_sum <= 23)) {
         return (<div>
             <CountUp
-                start={5}
+                start={99.00}
                 end={5}
                 duration={1.5}
                 decimal={2}
@@ -107,7 +107,7 @@ export function getResults(cnum, score) {
                 )}
 
             </CountUp> : <CountUp
-                start={0}
+                start={9}
                 end={0}
                 duration={1}
                 decimal={2}
@@ -120,7 +120,7 @@ export function getResults(cnum, score) {
                 )}
 
             </CountUp><CountUp
-                start={0}
+                start={8}
                 end={0}
                 duration={1}
                 decimal={2}
@@ -138,7 +138,7 @@ export function getResults(cnum, score) {
     if ((res_sum > 23) && (res_sum <= 35)) {
         return (<div>
             <CountUp
-                start={10}
+                start={99.00}
                 end={10}
                 duration={1.5}
                 decimal={2}
@@ -151,7 +151,7 @@ export function getResults(cnum, score) {
                 )}
 
             </CountUp> : <CountUp
-                start={0}
+                start={9}
                 end={0}
                 duration={1}
                 decimal={2}
@@ -164,7 +164,7 @@ export function getResults(cnum, score) {
                 )}
 
             </CountUp><CountUp
-                start={0}
+                start={7}
                 end={0}
                 duration={1}
                 decimal={2}
@@ -182,7 +182,7 @@ export function getResults(cnum, score) {
     if (res_sum > 35) {
         return (<div>
             <CountUp
-                start={20}
+                start={99.00}
                 end={20}
                 duration={1.5}
                 decimal={2}
@@ -193,7 +193,7 @@ export function getResults(cnum, score) {
                 )}
 
             </CountUp> : <CountUp
-                start={0}
+                start={9}
                 end={0}
                 duration={1}
                 decimal={2}
@@ -206,7 +206,7 @@ export function getResults(cnum, score) {
                 )}
 
             </CountUp><CountUp
-                start={0}
+                start={8}
                 end={0}
                 duration={1}
                 decimal={2}
