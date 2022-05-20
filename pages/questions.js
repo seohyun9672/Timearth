@@ -109,12 +109,12 @@ export default function Questions() {
                 q={qs[qnum].title}
                 arr={qs[qnum].ops}
                 c={qs[qnum].cat}
-                active ={true}
+                active={true}
             />
             {
                 Number(qnum) < qs.length - 1 &&
                 <BtnLarge
-                    bg={btn_data.inactive.bg}
+                    bg={btn_data.active.bg}
                     onClick={
                         () => {
                             r.push({
@@ -132,6 +132,7 @@ export default function Questions() {
             {
                 Number(qnum) >= qs.length - 1 &&
                 <BtnLarge
+                    bg={btn_data.active.bg}
                     onClick={
                         () => {
                             setOverlayOpen(true)
