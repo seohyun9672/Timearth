@@ -76,7 +76,7 @@ export default function Intro() {
             >{BtnText[0]}</Button></div>}
             {!intro && <div>
                 <h1>{PageTitle[1]}</h1>
-                <h4>Now let's see how many <Em>minutes</Em> you are adding to the Earth&apos;s lifespan! Complete our <Em>12-question quiz</Em> on the following categories:</h4>
+                <h4>Now let`&lsquo;`s see how many <Em>minutes</Em> you are adding to the Earth&apos;s lifespan! Complete our <Em>12-question quiz</Em> on the following categories:</h4>
             <CateGrid />
             <Button
                 className='primary large'
