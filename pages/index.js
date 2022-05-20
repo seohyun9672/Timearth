@@ -13,7 +13,11 @@ const LayoutComp = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 6.5em;
+    margin-top: 10em;
+
+    @media only screen and (max-width: 320px) and (max-height: 800px){
+        margin-top: 7em;
+    }
 `
 
 const Em = styled.span`
@@ -23,8 +27,22 @@ const Em = styled.span`
 `
 
 const Logo = styled.img`
-margin:0.5em;
-width:7vw;
+    width: 40%;
+    height: 40%;
+
+    @media only screen and (max-width: 320px) and (max-height: 800px){
+        width: 25%;
+        height: 25%;
+    }
+    @media only screen and (min-width: 1024px) and (min-height: 600px){
+        width: 15%;
+        height: 15%;
+    }
+    @media only screen and (min-height: 1024px) {
+        width: 30%;
+        height: 30%;
+    }
+
 `
 
 export default function Home() {
